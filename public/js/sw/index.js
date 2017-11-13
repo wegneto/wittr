@@ -1,3 +1,4 @@
 self.addEventListener('fetch', function(event) {
-    console.log(event.request);
+    //testing waiting
+    console.log("Hello world!");
 });
