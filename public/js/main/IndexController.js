@@ -12,7 +12,11 @@ export default function IndexController(container) {
 }
 
 IndexController.prototype._registerServiceWorker = function() {
-  // TODO: register service worker
+  navigator.serviceWorker.register('/sw.js').then(function(reg) {
+    console.log('it works!');
+  }).catch(function(err) {
+    console.log('it does not work :(');
+  });
 };
 
 // open a connection to the server for live updates
